@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Çaçan Köfte & Kumru - Menü</title>
+    <title>Çaçan Köfte & Kumru - Dijital Menü</title>
     <style>
         *, *::before, *::after {
             box-sizing: border-box;
@@ -93,13 +93,19 @@
             padding: 15px;
             margin-bottom: 15px;
             border: 1px solid #2A2A2A;
-            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+        }
+        .product-info {
+            flex: 1;
         }
         .product-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
         .product-name {
             font-size: 16px;
@@ -116,7 +122,6 @@
         .product-desc {
             font-size: 13px;
             color: #A0A0A0;
-            margin-bottom: 8px;
             line-height: 1.4;
         }
         .badge {
@@ -129,6 +134,23 @@
             border-radius: 4px;
             text-transform: uppercase;
             margin-bottom: 5px;
+        }
+        /* İçecek İkonları İçin Stil */
+        .drink-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            background-color: #252525;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #333;
+            flex-shrink: 0;
+        }
+        .drink-svg {
+            width: 26px;
+            height: 26px;
+            fill: #FF9E00;
         }
         footer {
             text-align: center;
@@ -149,13 +171,14 @@
 
     <div class="category-nav">
         <div class="category-nav-wrapper">
-            <a href="#corba-kavurma" class="category-btn active">Sıcaklar</a>
+            <a href="#corba-kavurma" class="category-btn">Sıcaklar</a>
             <a href="#kofte" class="category-btn">Köfte Çeşitleri</a>
             <a href="#hamburger" class="category-btn">Hamburger</a>
             <a href="#kumru" class="category-btn">Kumru</a>
             <a href="#patso" class="category-btn">Patso</a>
             <a href="#tost" class="category-btn">Tostlar</a>
             <a href="#tavuk-pilav" class="category-btn">Tavuk & Pilav</a>
+            <a href="#icecekler" class="category-btn">İçecekler</a>
         </div>
     </div>
 
@@ -165,19 +188,23 @@
             <h2 class="section-title">🍲 Çorba & Ev Yemekleri</h2>
             
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Mercimek Çorbası</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Mercimek Çorbası</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                    <div class="product-desc">Sıcak servis edilir, yanında limon ve özel sosu ile.</div>
                 </div>
-                <div class="product-desc">Sıcak servis edilir, yanında limon ve özel sosu ile.</div>
             </div>
 
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Kavurma</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Kavurma</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                    <div class="product-desc">Özel lokum kıvamında enfes dana kavurma.</div>
                 </div>
-                <div class="product-desc">Özel lokum kıvamında dana kavurma.</div>
             </div>
         </div>
 
@@ -185,32 +212,40 @@
             <h2 class="section-title">🍢 Köfte Çeşitleri</h2>
             
             <div class="product-card">
-                <span class="badge">Popüler</span>
-                <div class="product-header">
-                    <span class="product-name">Porsiyon Kasap Köfte</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-                <div class="product-desc">Özel yerli besi dana etinden günlük hazırlanan köfteler.</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Karışık Köfte</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <span class="badge">Popüler</span>
+                    <div class="product-header">
+                        <span class="product-name">Porsiyon Kasap Köfte</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                    <div class="product-desc">Özel yerli besi dana etinden günlük hazırlanan lezzet.</div>
                 </div>
             </div>
 
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Kaşarlı Köfte</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Karışık Köfte</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
                 </div>
             </div>
 
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Patatesli Köfte</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Kaşarlı Köfte</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Patatesli Köfte</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -219,34 +254,42 @@
             <h2 class="section-title">🍔 Hamburger Serisi</h2>
             
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Hamburger Menü</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-                <div class="product-desc">Hamburger, patates kızartması ve içecek ile birlikte.</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Burger (Tek)</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Hamburger Menü</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                    <div class="product-desc">Hamburger, çıtır patates kızartması ve içecek ile.</div>
                 </div>
             </div>
 
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Çift Burger</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Burger (Tek)</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
                 </div>
-                <div class="product-desc">Çift köfteli doyurucu lezzet.</div>
             </div>
 
             <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Çift Burger Menü</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Çift Burger</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                    <div class="product-desc">Çift köfteli doyurucu katmerli lezzet.</div>
                 </div>
-                <div class="product-desc">Çift köfteli burger, patates kızartması ve içecek ile birlikte.</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-info">
+                    <div class="product-header">
+                        <span class="product-name">Çift Burger Menü</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
+                    <div class="product-desc">Çift köfteli burger, patates kızartması ve içecek ile.</div>
+                </div>
             </div>
         </div>
 
@@ -254,276 +297,13 @@
             <h2 class="section-title">🥖 İzmir Kumru Çeşitleri</h2>
             
             <div class="product-card">
-                <span class="badge">Şefin Seçimi</span>
-                <div class="product-header">
-                    <span class="product-name">Sade Kumru</span>
-                    <span class="product-price">00 TL</span>
+                <div class="product-info">
+                    <span class="badge">Şefin Seçimi</span>
+                    <div class="product-header">
+                        <span class="product-name">Sade Kumru</span>
+                        <span class="product-price">00 TL</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Patatesli Kumru</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Yumurtalı Kumru</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Köfteli Kumru</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Nuggetlı Kumru</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-        </div>
-
-        <div id="patso">
-            <h2 class="section-title">🍟 Çıtır Patso Çeşitleri</h2>
-            
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Sade Patso</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-                <div class="product-desc">Ekmek arası çıtır patates kızartması, soslar ile.</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Nuggetlı Patso</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Sosisli Patso</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Sucuklu Patso</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Porsiyon Patates Kızartması</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-        </div>
-
-        <div id="tost">
-            <h2 class="section-title">🥪 Büfe Tostları</h2>
-            
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Karışık Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Kaşarlı Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Atom Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Mega Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Domatesli Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Yumurtalı Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Patatesli Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Köfteli Tost</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-        </div>
-
-        <div id="tavuk-pilav">
-            <h2 class="section-title">🍛 Tavuk & Pilav Serisi</h2>
-            
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">1 Porsiyon Tavuk Pilav</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">1.5 Porsiyon Tavuk Pilav</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Porsiyon Tavuk Pilav Köfte</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Sade Pilav</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Sade Tavuk</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <footer>
-        © 2026 Çaçan Köfte & Kumru. Tüm hakları saklıdır.
-    </footer>
-
-    <script>
-        const buttons = document.querySelectorAll('.category-btn');
-        buttons.forEach(btn => {
-            btn.addEventListener('click', () => {
-                buttons.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-            });
-        });
-    </script>
-</body>
-</html>
-<a href="#icecekler" class="category-btn">İçecekler</a>
-        <div id="icecekler">
-            <h2 class="section-title">🥤 Soğuk İçecekler</h2>
-            
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Şişe Coca-Cola</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Şişe Fanta</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Kutu Coca-Cola</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Kutu Fanta</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">1 Litre Coca-Cola</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">1 Litre Fanta</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">2.5 Litre Coca-Cola</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">2.5 Litre Fanta</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Ayran</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Soda</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-header">
-                    <span class="product-name">Su</span>
-                    <span class="product-price">00 TL</span>
-                </div>
-            </div>
-        </div>
+            <div class
