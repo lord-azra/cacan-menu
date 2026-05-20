@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çaçan Köfte & Kumru - Menü</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #121212;
+            color: #E0E0E0;
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+        header {
+            background: linear-gradient(180deg, #1f1f1f 0%, #121212 100%);
+            text-align: center;
+            padding: 30px 20px 15px 20px;
+            border-bottom: 2px solid #FF6B00;
+        }
+        .logo-text {
+            font-size: 24px;
+            font-weight: 800;
+            color: #FF6B00;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .sub-text {
+            font-size: 12px;
+            color: #A0A0A0;
+            margin-top: 5px;
+        }
+        /* Kategori Navigasyonu */
+        .category-nav {
+            position: sticky;
+            top: 0;
+            background-color: #121212;
+            z-index: 100;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 12px 10px;
+            border-bottom: 1px solid #2A2A2A;
+            -webkit-overflow-scrolling: touch;
+        }
+        .category-nav::-webkit-scrollbar {
+            display: none;
+        }
+        .category-nav-wrapper {
+            display: inline-flex;
+            gap: 8px;
+        }
+        .category-btn {
+            display: inline-block;
+            background-color: #1E1E1E;
+            color: #A0A0A0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid #2A2A2A;
+            transition: all 0.2s ease;
+        }
+        .category-btn:active, .category-btn.active {
+            background-color: #FF6B00;
+            color: #FFFFFF;
+            border-color: #FF6B00;
+        }
+        /* Konteyner */
+        .menu-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        .section-title {
+            font-size: 18px;
+            color: #FF6B00;
+            margin: 25px 0 15px 0;
+            padding-left: 8px;
+            border-left: 4px solid #FF6B00;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        /* Ürün Kartı */
+        .product-card {
+            background-color: #1E1E1E;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #2A2A2A;
+            position: relative;
+        }
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 6px;
+        }
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFFFFF;
+            padding-right: 10px;
+        }
+        .product-price {
+            font-size: 16px;
+            font-weight: 800;
+            color: #FF9E00;
+            white-space: nowrap;
+        }
+        .product-desc {
+            font-size: 13px;
+            color: #A0A0A0;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #D32F2F;
+            color: #FFFFFF;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 11px;
+            color: #555555;
+            background-color: #121212;
+            border-top: 1px solid #1E1E1E;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">ÇAÇAN KÖFTE & KUMRU</div>
+        <div class="sub-text">"Afiyetle yenen yemeklerin keyfi, burada başlar!"</div>
+    </header>
+
+    <div class="category-nav">
+        <div class="category-nav-wrapper">
+            <a href="#corba-kavurma" class="category-btn active">Sıcaklar</a>
+            <a href="#kofte" class="category-btn">Köfte Çeşitleri</a>
+            <a href="#hamburger" class="category-btn">Hamburger</a>
+            <a href="#kumru" class="category-btn">Kumru</a>
+            <a href="#patso" class="category-btn">Patso</a>
+            <a href="#tost" class="category-btn">Tostlar</a>
+            <a href="#tavuk-pilav" class="category-btn">Tavuk & Pilav</a>
+        </div>
+    </div>
+
+    <div class="menu-container">
+
+        <div id="corba-kavurma">
+            <h2 class="section-title">🍲 Çorba & Ev Yemekleri</h2>
+            
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Mercimek Çorbası</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Sıcak servis edilir, yanında limon ve özel sosu ile.</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Kavurma</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Özel lokum kıvamında dana kavurma.</div>
+            </div>
+        </div>
+
+        <div id="kofte">
+            <h2 class="section-title">🍢 Köfte Çeşitleri</h2>
+            
+            <div class="product-card">
+                <span class="badge">Popüler</span>
+                <div class="product-header">
+                    <span class="product-name">Porsiyon Kasap Köfte</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Özel yerli besi dana etinden günlük hazırlanan köfteler.</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Karışık Köfte</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Kaşarlı Köfte</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Patatesli Köfte</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="hamburger">
+            <h2 class="section-title">🍔 Hamburger Serisi</h2>
+            
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Hamburger Menü</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Hamburger, patates kızartması ve içecek ile birlikte.</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Burger (Tek)</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Çift Burger</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Çift köfteli doyurucu lezzet.</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Çift Burger Menü</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Çift köfteli burger, patates kızartması ve içecek ile birlikte.</div>
+            </div>
+        </div>
+
+        <div id="kumru">
+            <h2 class="section-title">🥖 İzmir Kumru Çeşitleri</h2>
+            
+            <div class="product-card">
+                <span class="badge">Şefin Seçimi</span>
+                <div class="product-header">
+                    <span class="product-name">Sade Kumru</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Patatesli Kumru</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Yumurtalı Kumru</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Köfteli Kumru</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Nuggetlı Kumru</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="patso">
+            <h2 class="section-title">🍟 Çıtır Patso Çeşitleri</h2>
+            
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Sade Patso</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+                <div class="product-desc">Ekmek arası çıtır patates kızartması, soslar ile.</div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Nuggetlı Patso</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Sosisli Patso</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Sucuklu Patso</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Porsiyon Patates Kızartması</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="tost">
+            <h2 class="section-title">🥪 Büfe Tostları</h2>
+            
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Karışık Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Kaşarlı Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Atom Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Mega Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Domatesli Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Yumurtalı Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Patatesli Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Köfteli Tost</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="tavuk-pilav">
+            <h2 class="section-title">🍛 Tavuk & Pilav Serisi</h2>
+            
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">1 Porsiyon Tavuk Pilav</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">1.5 Porsiyon Tavuk Pilav</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Porsiyon Tavuk Pilav Köfte</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Sade Pilav</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-header">
+                    <span class="product-name">Sade Tavuk</span>
+                    <span class="product-price">00 TL</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Çaçan Köfte & Kumru. Tüm hakları saklıdır.
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.category-btn');
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
